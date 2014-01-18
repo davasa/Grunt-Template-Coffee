@@ -2,6 +2,7 @@ Grunt-Template-Coffee
 =====================
 [![NPM Version](badge.fury.io/js/Grunt-Template-Coffee)](https://npmjs.org/package/Grunt-Template-Coffee)
 [![Build Status](https://secure.travis-ci.org/Dreamscapes/Grunt-Template-Coffee.png)](http://travis-ci.org/Dreamscapes/Grunt-Template-Coffee)
+[![Dependency Status](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee.png)](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com)
 
 > Grunt-init scaffolding template for CoffeeScript applications with support for [CoffeeLint](http://coffeelint.org), [Mocha](http://visionmedia.github.io/mocha) & [Should.js](https://github.com/visionmedia/should.js), and [Codo](https://github.com/coffeedoc/codo) via Grunt tasks
