@@ -65,7 +65,7 @@ In addition to providing a means to compile CoffeeScript ahead of time, this tem
 Let's discuss how the project is organised.
 
 ```
-$ My-Awesome-Project --> root folder of your project
+$ My-Awesome-Project  --> root folder of your project
 .
 ├── src/              --> CoffeeScript source files
 ├── res/              --> Static content - images, text files etc.
