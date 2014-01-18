@@ -1,0 +1,43 @@
+{
+  "name": "Grunt-Template-Coffee",
+  "version": "0.1.0",
+  "description": "Grunt-init scaffolding template for CoffeeScript applications",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dreamscapes/Grunt-Template-Coffee"
+  },
+  "keywords": [
+    "grunt",
+    "grunt-init",
+    "scaffold",
+    "template",
+    "CoffeeScript",
+    "gruntplugin"
+  ],
+  "author": {
+    "name": "Robert Rossmann",
+    "email": "rr.rossmann@me.com",
+    "url": "https://github.com/Alaneor"
+  },
+  "bugs": {
+    "url": "https://github.com/Dreamscapes/Grunt-Template-Coffee/issues"
+  },
+  "homepage": "https://github.com/Dreamscapes/Grunt-Template-Coffee",
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-coffeelint": "0.0.8",
+    "load-grunt-tasks": "~0.2.1",
+    "should": "~3.0.0",
+    "grunt-mocha-cli": "~1.5.0",
+    "grunt-contrib-coffee": "~0.8.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-codo": "~0.1.0"
+  }
+}
