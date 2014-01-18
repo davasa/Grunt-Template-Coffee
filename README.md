@@ -1,6 +1,6 @@
 Grunt-Template-Coffee
 =====================
-[![NPM Version](badge.fury.io/js/grunt-template-coffee)](https://npmjs.org/package/grunt-template-coffee)
+[![NPM Version](https://badge.fury.io/js/grunt-template-coffee.png)](https://npmjs.org/package/grunt-template-coffee)
 [![Build Status](https://secure.travis-ci.org/Dreamscapes/Grunt-Template-Coffee.png)](http://travis-ci.org/Dreamscapes/Grunt-Template-Coffee)
 [![Dependency Status](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee.png)](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com)
