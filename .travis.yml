@@ -3,7 +3,6 @@ node_js:
  - 0.10
 install:
  - npm install -g grunt-cli
- - npm install -g coffeelint
  - npm install -g coffeelint-newline-at-eof
  - npm install
 script:
