@@ -1,5 +1,5 @@
 {
-  "name": "Grunt-Template-Coffee",
+  "name": "grunt-template-coffee",
   "version": "0.1.0",
   "description": "Grunt-init scaffolding template for CoffeeScript applications",
   "license": "BSD-3-Clause",
