@@ -1,6 +1,6 @@
 {
   "name": "grunt-template-coffee",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Grunt-init scaffolding template for CoffeeScript applications",
   "license": "BSD-3-Clause",
   "scripts": {

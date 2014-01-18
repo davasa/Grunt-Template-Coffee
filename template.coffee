@@ -7,7 +7,7 @@ For full copyright and license information, please see the LICENSE file
 @author     Robert Rossmann <rr.rossmann@me.com>
 @copyright  2014 Robert Rossmann
 @link       https://github.com/Dreamscapes/Grunt-Template-Coffee
-@license    http://http://choosealicense.com/licenses/bsd-3-clause  BSD-3-Clause License
+@license    http://choosealicense.com/licenses/bsd-3-clause  BSD-3-Clause License
 ###
 
 # Basic template description
