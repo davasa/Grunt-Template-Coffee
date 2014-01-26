@@ -65,8 +65,8 @@ exports.template = ( grunt, init, done ) ->
       "grunt-contrib-copy": "~0.5.0"
       "grunt-contrib-watch": "~0.5.3"
       "grunt-mocha-cli": "~1.5.0"
-      "load-grunt-tasks": "~0.2.1"
-      "should": "~3.0.0"
+      "load-grunt-tasks": "~0.3.0"
+      "should": "~3.1.0"
 
     files         = init.filesToCopy props
     props.travis  = /y/i.test props.travis          # Convert user input to boolean

@@ -101,6 +101,20 @@ module.exports = ( grunt ) ->
         dest:                     '<%= libDir %>'
 
 
+    # grunt-contrib-uglify: Compress and mangle JavaScript files
+    uglify:
+
+      # Targets
+
+      build:
+        files: [
+          expand:                 true
+          cwd:                    '<%= libDir %>'
+          src:                    '**/*.js'
+          dest:                   '<%= libDir %>'
+        ]
+
+
     # grunt-contrib-clean: Clean the target files & folders, deleting anything inside
     clean:
 
@@ -142,7 +156,8 @@ module.exports = ( grunt ) ->
   define 'lint',                  ['coffeelint']
   define 'test',                  ['mochacli']
   define 'docs',                  ['codo']
-  define 'build',                 ['lint', 'test', 'clean:build', 'coffee:build', 'copy:build']
+  define 'build:dev',             ['lint', 'test', 'clean:build', 'coffee:build', 'copy:build']
+  define 'build',                 ['build:dev', 'uglify:build']
   define 'default',               ['build']
 
   ###############################################################################
