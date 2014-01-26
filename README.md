@@ -5,7 +5,7 @@ Grunt-Template-Coffee
 [![Dependency Status](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee.png)](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com)
 
-> Grunt-init scaffolding template for CoffeeScript applications with support for [CoffeeLint](http://coffeelint.org), [Mocha](http://visionmedia.github.io/mocha) & [Should.js](https://github.com/visionmedia/should.js), and [Codo](https://github.com/coffeedoc/codo) via Grunt tasks
+> Grunt-init scaffolding template for CoffeeScript applications with support for [CoffeeLint](http://coffeelint.org), [Mocha](http://visionmedia.github.io/mocha) & [Should.js](https://github.com/visionmedia/should.js), [UglifyJS](https://github.com/mishoo/UglifyJS2) and [Codo](https://github.com/coffeedoc/codo) via Grunt tasks
 
 If you are new to using templates with Grunt, take a look at [Grunt-Init](http://gruntjs.com/project-scaffolding).
 
@@ -52,7 +52,7 @@ The following tasks are at your disposal in the template:
 
 1. `lint` - Lint your CoffeeScript files using [CoffeeLint](http://coffeelint.org)
 1. `test` - Test your CoffeeScript using [Mocha](http://visionmedia.github.io/mocha) and [Should.js](https://github.com/visionmedia/should.js)
-1. `build` - Lint your code, test it, compile your CoffeeScript files and move everything into place, ready for publishing to **NPM**
+1. `build` - Lint your code, test it, compile your CoffeeScript files, move them into place and then uglify them, making the app ready for publishing to **NPM**
 1. `docs` - Generate API documentation from your source code using [Codo](https://github.com/coffeedoc/codo)
 
 ## Core concepts
@@ -99,6 +99,7 @@ This is the application's staging area - once you run `grunt build`, it will:
 1. Compile your *index.coffee* to JavaScript and place it to *lib/* folder
 1. Copy the *res/* folder to *lib/*, doing nothing with its contents
 1. Copy all files from your root folder to *lib/*, except of *gruntfile.coffee*, *index.coffee* and *coffeelint.json*
+1. Uglify and mangle all JavaScript files within the *lib/* directory
 
 When finished, you will have a fully working, deployment-ready application in your *lib/* folder, ready for publishing to **NPM**. Just give it a try - create a test project, install dependencies and run `grunt build`, then take a look inside the *lib/* folder to see what happened.
 
