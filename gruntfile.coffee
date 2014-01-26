@@ -27,12 +27,10 @@ module.exports = ( grunt ) ->
     # Define aliases for known fs locations
     srcDir:                       'src/'              # CoffeeScript or other source files to be compiled or processed
     libDir:                       'lib/'              # Final, compiled, optimised and whatnot product
-    tstDir:                       'test/'             # Project's tests
     resDir:                       'res/'              # Static resources - images, text files, external deps etc.
     docDir:                       '<%= libDir %>docs' # Automatically-generated or compiled documentation
     instDir:                      process.env.HOME + '/.grunt-init/node-coffee/'   # Template's installation directory
     srcFiles:                     ['<%= srcDir %>**/*.coffee', 'template.coffee']
-    tstFiles:                     '<%= tstDir %>**/*.test.coffee'
     pkg:                          jsonFile 'package.json'
 
 
@@ -54,7 +52,7 @@ module.exports = ( grunt ) ->
         tasks:                    '<%= watch.options.tasks %>'
 
       project:                    # Watch the project's source files for changes
-        files:                    ['<%= srcFiles %>', '<%= tstFiles %>']
+        files:                    '<%= srcFiles %>'
         tasks:                    '<%= watch.options.tasks %>'
 
 
@@ -65,29 +63,7 @@ module.exports = ( grunt ) ->
       # Targets
 
       gruntfile:                  'gruntfile.coffee'                          # Lint this file
-      project:                    ['<%= srcFiles %>', '<%= tstFiles %>']      # Lint application's project files
-
-
-    # grunt-mocha-cli: Run tests with Mocha framework
-    mochacli:
-      options:
-        reporter:                 'spec'                                      # This report is nice and human-readable
-        require:                  ['should']                                  # Run the tests using Should.js
-        compilers:                ['coffee:coffee-script']
-
-      # Targets
-
-      project:                    # Run the project's tests
-        src:                      ['<%= tstFiles %>']
-
-
-    # grunt-codo: CoffeeScript API documentation generator
-    codo:
-      options:
-        title:                    'Grunt-Template-Coffee'
-        debug:                    false
-        inputs:                   ['<%= srcDir %>']
-        output:                   '<%= docDir %>'
+      project:                    '<%= srcFiles %>'                           # Lint application's project files
 
 
     # grunt-contrib-coffee: Compile CoffeeScript into native JavaScript
@@ -147,8 +123,7 @@ module.exports = ( grunt ) ->
   ### GRUNT TASKS ###
 
   define 'lint',                  ['coffeelint']
-  define 'test',                  ['mochacli']
-  define 'build',                 ['lint', 'test', 'clean:build', 'coffee:build', 'copy:build']
+  define 'build',                 ['lint', 'clean:build', 'coffee:build', 'copy:build']
   define 'install',               ['build', 'copy:install']
   define 'default',               ['build']
 
