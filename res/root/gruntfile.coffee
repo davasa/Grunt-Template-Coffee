@@ -103,7 +103,6 @@ module.exports = ( grunt ) ->
 
     # grunt-contrib-uglify: Compress and mangle JavaScript files
     uglify:
-      options:
 
       # Targets
 
