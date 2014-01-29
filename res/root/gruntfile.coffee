@@ -15,7 +15,6 @@ module.exports = ( grunt ) ->
   ### ALIASES ###
 
   jsonFile =                      grunt.file.readJSON           # Read a json file
-  module =                        grunt.loadNpmTasks            # Register a grunt task module
   define =                        grunt.registerTask            # Register a local task
   log =                           grunt.log.writeln             # Write a single line to STDOUT
 
