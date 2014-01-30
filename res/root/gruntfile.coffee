@@ -71,7 +71,7 @@ module.exports = ( grunt ) ->
       options:
         reporter:                 'spec'                                      # This report is nice and human-readable
         require:                  ['should']                                  # Run the tests using Should.js
-        compilers:                ['coffee:coffee-script']
+        compilers:                ['coffee:coffee-script/register']
 
       # Targets
 
