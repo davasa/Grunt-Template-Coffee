@@ -61,7 +61,7 @@ exports.template = ( grunt, init, done ) ->
       "grunt-codo": "~0.1.0"
       "grunt-coffeelint": "0.0.8"
       "grunt-contrib-clean": "~0.5.0"
-      "grunt-contrib-coffee": "~0.9.0"
+      "grunt-contrib-coffee": "~0.10.0"
       "grunt-contrib-copy": "~0.5.0"
       "grunt-contrib-uglify": "~0.3.1"
       "grunt-contrib-watch": "~0.5.3"
