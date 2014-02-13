@@ -36,7 +36,7 @@ Once the template is installed in your *$HOME*, all you have to do is create a f
 ```sh
 mkdir My-Awesome-Project # Create a clean folder for your new project
 grunt-init node-coffee
-# ... answering questions, Grunt doing its magic...
+# ... You answering questions, Grunt doing its magic...
 npm install # Install development dependencies
 ```
 
@@ -71,7 +71,6 @@ $ My-Awesome-Project  --> root folder of your project
 ├── src/              --> CoffeeScript source files
 ├── res/              --> Static content - images, text files etc.
 ├── test/             --> Your test cases
-├── lib/              --> The application's staging ground for publishing
 │
 ├── gruntfile.coffee  --> Grunt tasks configuration
 ├── index.coffee      --> Your application's entry point
@@ -92,21 +91,24 @@ Static content like images, text files, or any other non-CoffeeScript files shou
 #### The *test* folder:
 Write your test suites here. [Mocha](http://visionmedia.github.io/mocha) is used as testing framework, while [Should.js](https://github.com/visionmedia/should.js) provides the assertions for your tests.
 
-#### The *lib* folder:
-This is the application's staging area - once you run `grunt build`, it will:
+#### The build process:
+Build your application with the `grunt build` command - it will:
 
-1. Compile CoffeeScript in *src/* to JavaScript and place the compiled files to *lib/src/* folder
-1. Compile your *index.coffee* to JavaScript and place it to *lib/* folder
-1. Copy the *res/* folder to *lib/*, doing nothing with its contents
-1. Copy all files from your root folder to *lib/*, except of *gruntfile.coffee*, *index.coffee* and *coffeelint.json*
-1. Uglify and mangle all JavaScript files within the *lib/* directory
+1. Compile CoffeeScript in *src/* to JavaScript and place the compiled files next to your source code
+1. Compile your *index.coffee* to JavaScript
+1. Do nothing with files inside the *res/* folder
+1. Uglify and mangle all compiled JavaScript files
 
-When finished, you will have a fully working, deployment-ready application in your *lib/* folder, ready for publishing to **NPM**. Just give it a try - create a test project, install dependencies and run `grunt build`, then take a look inside the *lib/* folder to see what happened.
+When finished, you will have an optimised version of your project, ready for publishing to **NPM**. Just give it a try - create a test project, install dependencies and run `grunt build`, then take a look around to see what happened.
 
 #### Publishing to **NPM Registry**:
-Once you have everything sorted out and your application built successfully, go to your *lib/* folder and publish your application to **NPM** via: `npm publish`. And, you are done!
+Once you have everything sorted out and your application built successfully, simply publish your application to **NPM** via `npm publish`. And, you are done!
 
 The template also installs some sample content to show you how to write and organise the code so you get better understanding about your possibilities.
+
+### Creating additional directories
+
+If you would like to give your code more structure via folder hierarchy, always remember to create a *.gitignore* file in all new folders that excludes all `*.js` files ( to prevent accidentally commiting compiled JavaScript code into your repository ) and also update the *.npmignore* file in the root directory to exclude all *YOUR_FOLDER/\*.coffee* files to prevent publishing your source CoffeeScript files with your optimised content.
 
 ## Planned features
 
