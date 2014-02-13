@@ -1,4 +1,6 @@
 {
   "gitignore": ".gitignore",
+  "src/gitignore": "src/.gitignore",
+  "npmignore": ".npmignore",
   "travis.yml": ".travis.yml"
 }

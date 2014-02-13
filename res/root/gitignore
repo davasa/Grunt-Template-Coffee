@@ -1,5 +1,5 @@
 # Project-specific excludes
-lib
+*.js
 
 # Platform-specific excludes
 thumbs.db

@@ -25,10 +25,9 @@ module.exports = ( grunt ) ->
 
     # Define aliases for known fs locations
     srcDir:                       'src/'              # CoffeeScript or other source files to be compiled or processed
-    libDir:                       'lib/'              # Final, compiled, optimised and whatnot product
     tstDir:                       'test/'             # Project's tests
     resDir:                       'res/'              # Static resources - images, text files, external deps etc.
-    docDir:                       '<%= libDir %>docs' # Automatically-generated or compiled documentation
+    docDir:                       'docs/'             # Automatically-generated or compiled documentation
     srcFiles:                     ['<%= srcDir %>**/*.coffee', 'index.coffee']
     tstFiles:                     '<%= tstDir %>**/*.test.coffee'
     pkg:                          jsonFile 'package.json'
@@ -108,9 +107,7 @@ module.exports = ( grunt ) ->
       build:
         files: [
           expand:                 true
-          cwd:                    '<%= libDir %>'
-          src:                    '**/*.js'
-          dest:                   '<%= libDir %>'
+          src:                    '<%= srcDir %>**/*.js'
         ]
 
 
@@ -119,25 +116,8 @@ module.exports = ( grunt ) ->
 
       # Targets
 
-      build:                      ['<%= libDir %>*', '<%= libDir %>.*'] # Clean the build target directory's contents
-
-
-    # grunt-contrib-copy: Copy source files to their destinations
-    copy:
-
-      # Targets
-
-      build:                      # Copy static resources into target build directory
-        files: [
-          expand:                 true
-          src:                    ['*', '.*', '!index.coffee', '!gruntfile.coffee', '!coffeelint.json']
-          dest:                   '<%= libDir %>'
-          filter:                 'isFile'
-        ,
-          expand:                 true
-          src:                    '<%= resDir %>**'
-          dest:                   '<%= libDir %>',
-        ]
+      build:                      ['<%= srcDir %>**/*.js', 'index.js']        # Clean the build products
+      docs:                       ['<%= docDir %>']
 
 
   ###############################################################################
@@ -155,7 +135,7 @@ module.exports = ( grunt ) ->
   define 'lint',                  ['coffeelint']
   define 'test',                  ['mochacli']
   define 'docs',                  ['codo']
-  define 'build:dev',             ['lint', 'test', 'clean:build', 'coffee:build', 'copy:build']
+  define 'build:dev',             ['clean:build', 'lint', 'test', 'coffee:build']
   define 'build',                 ['build:dev', 'uglify:build']
   define 'default',               ['build']
 
