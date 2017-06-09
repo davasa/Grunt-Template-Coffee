@@ -5,7 +5,7 @@ Grunt-Template-Coffee
 [![Dependency Status](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee.png)](https://gemnasium.com/Dreamscapes/Grunt-Template-Coffee)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com)
 
-> Grunt-init scaffolding template for CoffeeScript applications with support for [CoffeeLint](http://coffeelint.org), [Mocha](http://visionmedia.github.io/mocha) & [Should.js](https://github.com/visionmedia/should.js), [UglifyJS](https://github.com/mishoo/UglifyJS2) and [Codo](https://github.com/coffeedoc/codo) via Grunt tasks
+> Grunt-init scaffolding template for CoffeeScript applications with support for [CoffeeLint](http://coffeelint.org), [Mocha](http://mochajs.org/) & [Should.js](https://github.com/visionmedia/should.js), [UglifyJS](https://github.com/mishoo/UglifyJS2) and [Codo](https://github.com/coffeedoc/codo) via Grunt tasks
 
 If you are new to using templates with Grunt, take a look at [Grunt-Init](http://gruntjs.com/project-scaffolding).
 
@@ -51,7 +51,7 @@ If you find yourself overriding the automatically-detected default answers each 
 The following tasks are at your disposal in the template:
 
 1. `lint` - Lint your CoffeeScript files using [CoffeeLint](http://coffeelint.org)
-1. `test` - Test your CoffeeScript using [Mocha](http://visionmedia.github.io/mocha) and [Should.js](https://github.com/visionmedia/should.js)
+1. `test` - Test your CoffeeScript using [Mocha](http://mochajs.org/) and [Should.js](https://github.com/visionmedia/should.js)
 1. `build` - Lint your code, test it, compile your CoffeeScript files, move them into place and then uglify them, making the app ready for publishing to **NPM**
 1. `docs` - Generate API documentation from your source code using [Codo](https://github.com/coffeedoc/codo)
 
@@ -89,7 +89,7 @@ Your CoffeeScript files should be stored here. You may organise your project ins
 Static content like images, text files, or any other non-CoffeeScript files should be placed here. All these files will be simply copied over to the staging area upon build.
 
 #### The *test* folder:
-Write your test suites here. [Mocha](http://visionmedia.github.io/mocha) is used as testing framework, while [Should.js](https://github.com/visionmedia/should.js) provides the assertions for your tests.
+Write your test suites here. [Mocha](http://mochajs.org/) is used as testing framework, while [Should.js](https://github.com/visionmedia/should.js) provides the assertions for your tests.
 
 #### The build process:
 Build your application with the `grunt build` command - it will:
